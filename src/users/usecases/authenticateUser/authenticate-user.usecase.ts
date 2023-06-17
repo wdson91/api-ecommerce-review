@@ -6,7 +6,7 @@ import { ensureEmail } from 'src/ensures/ensureEmail';
 import { ensurePassword } from 'src/ensures/ensurePassword';
 import { AppError } from 'src/shared/errors/AppError';
 import { DayjsProvider } from 'src/shared/providers/DateProvider/implementations/dayjs-date.provider';
-import auth from 'src/users/auth/auth';
+import auth from 'src/auth/auth';
 import { IRequest } from 'src/users/dto/request-user.dto';
 import { RefreshTokenService } from 'src/users/repositories/implementations/refresh-token.service';
 import { UsersService } from 'src/users/repositories/implementations/users.service';
