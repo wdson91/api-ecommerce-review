@@ -1,12 +1,12 @@
 import { Injectable } from '@nestjs/common';
-import { CreateUserDto } from 'src/users/dto/create-user.dto';
+
 import { IUserResponseDTO } from 'src/users/dto/response-user.dto';
 import { ListUsersMap } from 'src/users/mappers/list-user.map';
 import { UsersService } from 'src/users/repositories/implementations/users.service';
 
 @Injectable()
 export class ListUsersUseCase {
-    constructor(private readonly usersService: UsersService) {}
+    constructor(private readonly usersService: UsersService) { }
 
     async execute(): Promise<IUserResponseDTO[]> {
         const users =

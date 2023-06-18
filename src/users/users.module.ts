@@ -48,4 +48,4 @@ import {
     RefreshTokenService,
   ],
 })
-export class UsersModule {}
+export class UsersModule { }

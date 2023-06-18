@@ -1,6 +1,6 @@
 import { Injectable } from '@nestjs/common';
 import { AppError } from 'src/shared/errors/AppError';
-import { CreateUserDto } from 'src/users/dto/create-user.dto';
+
 import { User } from 'src/users/entities/user.entity';
 import { hash } from 'bcrypt';
 
@@ -13,7 +13,7 @@ import { UpdateUserDto } from 'src/users/dto/update-user.dto';
 
 @Injectable()
 export class UpdateUserUseCase {
-    constructor(private readonly usersService: UsersService) {}
+    constructor(private readonly usersService: UsersService) { }
 
     async execute(
         id: string,

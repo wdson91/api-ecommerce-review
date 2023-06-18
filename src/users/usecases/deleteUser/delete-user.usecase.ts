@@ -2,13 +2,14 @@ import { Injectable } from '@nestjs/common';
 import { ensureId } from 'src/ensures/ensureId';
 import { AppError } from 'src/shared/errors/AppError';
 import { IUserResponseDTO } from 'src/users/dto/response-user.dto';
-import { UserMap } from 'src/users/mappers/user.map';
+
+
 
 import { UsersService } from 'src/users/repositories/implementations/users.service';
 
 @Injectable()
 export class DeleteUserByIdUseCase {
-    constructor(private readonly usersService: UsersService) {}
+    constructor(private readonly usersService: UsersService) { }
 
     async execute(id: string): Promise<any> {
         if (!ensureId(id)) {
